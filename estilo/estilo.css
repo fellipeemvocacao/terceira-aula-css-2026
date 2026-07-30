@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+     min-height: 100vh;
+     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+     position: relative;
+     overflow-x: hidden;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     padding: 40px 20px;
+}
+/*=== VÍDEO DE FUNDO ===*/
+/* O VÍDEO FICA FIXO, ATRÁS DE TUDO, COBRINDO A TELA INTEIRA*/
+.bg-video{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+/* CAMADA ESCURA POR CIMA DO VÍDEO, PARA O TEXTO FICAR LEGÍVEL*/
+.bg-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(4, 55, 221, 0.548);
+    z-index: -1;
+}
+/* CABEÇALHO */
+header{
+    text-align: center;
+    color: rgba(0, 0, 0, 0.459);
+    margin-bottom: 40px;
+}
+header h1{
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    text-shadow: 0 2px 8px rgba(5, 247, 226, 0.993);
+}
+header p{
+     font-size: 1.1rem;
+     opacity: 0.9;
+}
+/* CARDS */
+.container-cards{
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.card{
+    position: relative;
+    width: 280px;
+    height: 380px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(4, 214, 241, 0.938);
+    cursor: pointer;
+}
+.card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    /*ESSA TRANSIÇÃO FAZ A IMAGEM CRESCER SUAVEMENTE */
+    transition: transform 0.5s ease;
+}
+/* AO PASSAR O MOUSE, A IMAGEM DÁ UM LEVE ZOOM */
+.card:hover img{
+    transform: scale(1.15);
+}
+/* O CONTEÚDO DO CARD FICA ESCONDIDO EM BAIXO, FORA DA VISTA */
+.card-conteudo{
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 20px;
+    color: rgb(236, 240, 241);
+    background: linear-gradient(to top, rgba(0, 47, 255, 0.521));
+    /* COMEÇA DESLOCANDO PARA BAIXO, E INVÍSIVEL */
+    transform: translateY(60%);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+/* AO PASSAR O MOUSE NO CARD, O CONTEÚDO SOBE E APARECE */
+.card:hover .card-conteudo{
+    transform: translateY(0);
+    opacity: 1;
+}
+.card-conteudo h3{
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
