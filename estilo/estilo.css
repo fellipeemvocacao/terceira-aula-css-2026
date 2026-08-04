@@ -12,6 +12,7 @@ body{
      flex-direction: column;
      align-items: center;
      padding: 40px 20px;
+     color: #791a1a
 }
 /*=== VÍDEO DE FUNDO ===*/
 /* O VÍDEO FICA FIXO, ATRÁS DE TUDO, COBRINDO A TELA INTEIRA*/
@@ -125,4 +126,41 @@ header p{
         width: 90%;
         height: 320px;
     }
+}
+/* Caixa branca/escura translúcida para destacar o texto sobre o fundo */
+.container {
+    background-color: rgba(255, 255, 255, 0.9); /* Cor de fundo (branca com leve transparência) */
+    color: #222222; /* Cor do texto escuro para dar contraste */
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilização do Rodapé */
+footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid #cccccc; /* Linha divisória acima do rodapé */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Botão de voltar */
+.back-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1a365d;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.back-btn:hover {
+    background-color: #2b6cb0;
 }
