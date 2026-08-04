@@ -32,19 +32,19 @@ body{
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(4, 55, 221, 0.548);
+   
     z-index: -1;
 }
 /* CABEÇALHO */
 header{
     text-align: center;
-    color: rgba(0, 0, 0, 0.459);
+    color: rgb(219, 175, 73);
     margin-bottom: 40px;
 }
 header h1{
-    font-size: 1.1rem;
+    font-size: 2.5rem;
     margin-bottom: 10px;
-    text-shadow: 0 2px 8px rgba(5, 247, 226, 0.993);
+    text-shadow: 0 2px 8px rgba(255, 230, 0, 0.527);
 }
 header p{
      font-size: 1.1rem;
@@ -59,11 +59,11 @@ header p{
 }
 .card{
     position: relative;
-    width: 280px;
+    width: 300px;
     height: 380px;
     border-radius: 16px;
     overflow: hidden;
-    box-shadow: 0 10px 30px rgba(4, 214, 241, 0.938);
+    box-shadow: 0 10px 30px rgb(0, 0, 0);
     cursor: pointer;
 }
 .card img{
@@ -85,7 +85,7 @@ header p{
     width: 100%;
     padding: 20px;
     color: rgb(236, 240, 241);
-    background: linear-gradient(to top, rgba(0, 47, 255, 0.521));
+    background: linear-gradient(to top, rgba(192, 130, 36, 0.781));
     /* COMEÇA DESLOCANDO PARA BAIXO, E INVÍSIVEL */
     transform: translateY(60%);
     opacity: 0;
@@ -99,4 +99,30 @@ header p{
 .card-conteudo h3{
     font-size: 1.3rem;
     margin-bottom: 8px;
+}
+.card-conteudo p{
+    font-size: 1.0rem;
+    margin-bottom: 14px;
+    opacity: 1.0;
+}
+.btn{
+    display: inline-block;
+    padding: 8px 18px;
+    background: #070707;
+    color: #d35810;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.0rem;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.btn:hover{
+    background: #ffffff;
+}
+/* RESPONSIVO*/
+@media(max-width:600px){
+    .card{
+        width: 90%;
+        height: 320px;
+    }
 }
